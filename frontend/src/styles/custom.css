@@ -1,0 +1,387 @@
+/* Global Styles */
+.App {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.main-content {
+    min-height: calc(100vh - 200px);
+}
+
+/* Navigation Styles */
+.cu-navbar {
+    background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    border-bottom: 3px solid #ffc107;
+}
+
+.cu-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.brand-text {
+    background: linear-gradient(45deg, #ffc107, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.user-welcome {
+    text-align: right;
+    line-height: 1.2;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></svg>');
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.hero-buttons .btn {
+    margin: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Stats Section */
+.hero-stats .stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hero-stats .stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* CU Building Illustration */
+.cu-building-illustration {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    border: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.building-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card.border-primary:hover { border-left-color: #007bff; }
+.feature-card.border-success:hover { border-left-color: #28a745; }
+.feature-card.border-info:hover { border-left-color: #17a2b8; }
+.feature-card.border-warning:hover { border-left-color: #ffc107; }
+.feature-card.border-danger:hover { border-left-color: #dc3545; }
+.feature-card.border-secondary:hover { border-left-color: #6c757d; }
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Department Cards */
+.dept-card {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border: none;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.dept-card:hover {
+    background: linear-gradient(45deg, #ffc107, #ff8c00);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.departments-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* CTA Card */
+.cta-card {
+    background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
+    border: none;
+    border-radius: 20px;
+}
+
+/* Footer */
+.cu-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    border-top: 3px solid #ffc107;
+}
+
+.cu-footer a:hover {
+    color: #ffc107 !important;
+    transition: color 0.3s ease;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.form-select:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* Button Styles */
+.btn-warning {
+    background: linear-gradient(45deg, #ffc107, #ff8c00);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(45deg, #ff8c00, #ffc107);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+.btn-outline-warning {
+    border-color: #ffc107;
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.btn-outline-warning:hover {
+    background: #ffc107;
+    border-color: #ffc107;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+    
+    .user-welcome {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .cu-brand {
+        font-size: 1.2rem;
+    }
+    
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .cu-building-illustration {
+        padding: 2rem;
+    }
+    
+    .building-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Loading Animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ffc107, #ff8c00);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff8c00, #ffc107);
+}
+/* Clickable elements - Enhanced */
+.clickable {
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    user-select: none;
+}
+
+.clickable:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Specific clickable styles */
+.stat-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.stat-item:hover {
+    background: rgba(255, 193, 7, 0.3) !important;
+    transform: translateY(-5px) scale(1.05);
+}
+
+.feature-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dept-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dept-card:hover {
+    background: linear-gradient(45deg, #ffc107, #ff8c00) !important;
+    color: white !important;
+    transform: translateY(-5px) !important;
+}
+
+.cu-building-illustration {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cu-building-illustration:hover {
+    transform: scale(1.05) !important;
+    background: rgba(255, 193, 7, 0.2) !important;
+}
+
+.cta-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-card:hover {
+    transform: scale(1.02) !important;
+}
+
+/* Button hover effects */
+.hero-buttons .btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
